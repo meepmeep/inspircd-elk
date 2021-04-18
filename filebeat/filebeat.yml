@@ -1,0 +1,17 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - <CHANGEME_path_to_inspircd>/logs/ircd.log
+  tags: ["ircd"]
+  fields:
+   ircd_index: "ircd"
+  exclude_lines: [' core_dns:',' m_cgiirc']
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+setup.template.settings:
+  index.number_of_shards: 1
+setup.kibana:
+output.logstash:
+  hosts: ['<CHANGEME_Logstash_ip>:5044"]

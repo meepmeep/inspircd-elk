@@ -1,0 +1,4 @@
+* * * * * /usr/local/bin/etl_inspircdxml.sh
+* * * * * sleep 30 ; /usr/local/bin/etl_inspircdxml.sh
+* * * * * /usr/local/bin/etl_inspircdxml_minute.sh
+*/5 * * * * /usr/local/bin/etl_inspircdxml_5minute.sh
